@@ -1,0 +1,20 @@
+{
+  "name": "bestcars-database-service",
+  "version": "1.0.0",
+  "description": "Node.js/Express/MongoDB microservice for dealerships and reviews",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "seed": "node populate_db.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "mongoose": "^8.2.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

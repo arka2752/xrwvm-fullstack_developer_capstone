@@ -1,0 +1,62 @@
+version: '3.9'
+
+services:
+  # ── MongoDB ────────────────────────────────────────────────────────────────
+  mongo:
+    image: mongo:7
+    container_name: bestcars_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: bestcarsdb
+
+  # ── Node.js / Express / MongoDB service ───────────────────────────────────
+  node_service:
+    build:
+      context: ../database
+      dockerfile: ../docker/Dockerfile.node
+    container_name: bestcars_node
+    restart: unless-stopped
+    ports:
+      - "3030:3030"
+    environment:
+      PORT: 3030
+      MONGO_URL: mongodb://mongo:27017/bestcarsdb
+    depends_on:
+      - mongo
+
+  # ── Flask Sentiment microservice ──────────────────────────────────────────
+  sentiment:
+    build:
+      context: ../sentiment
+      dockerfile: ../docker/Dockerfile.sentiment
+    container_name: bestcars_sentiment
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+
+  # ── Django backend ────────────────────────────────────────────────────────
+  django:
+    build:
+      context: ../server
+      dockerfile: ../docker/Dockerfile.django
+    container_name: bestcars_django
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      DEBUG: "False"
+      DJANGO_SECRET_KEY: "change-this-in-production"
+      NODE_SERVICE_URL: http://node_service:3030
+      SENTIMENT_SERVICE_URL: http://sentiment:5000
+    depends_on:
+      - node_service
+      - sentiment
+    volumes:
+      - ../server:/app
+
+volumes:
+  mongo_data:
