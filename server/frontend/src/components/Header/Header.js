@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import './Header.css';
 
 export default function Header({ user, onLogout }) {
@@ -16,17 +16,17 @@ export default function Header({ user, onLogout }) {
     <header className="site-header">
       <div className="container header-inner">
         {/* Logo */}
-        <Link to="/" className="logo" onClick={() => setMenuOpen(false)}>
+        <NavLink to="/" className="logo" onClick={() => setMenuOpen(false)}>
           <span className="logo-icon">🚗</span>
           <span className="logo-text">Best<span className="logo-accent">Cars</span></span>
-        </Link>
+        </NavLink>
 
         {/* Desktop nav */}
         <nav className="nav-links">
-          <Link to="/" className="nav-link">Home</Link>
-          <Link to="/dealers" className="nav-link">Dealerships</Link>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/contact" className="nav-link">Contact</Link>
+          <NavLink to="/" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Home</NavLink>
+          <NavLink to="/dealers" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Dealerships</NavLink>
+          <NavLink to="/about" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>About</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => `nav-link ${isActive ? 'active' : ''}`}>Contact</NavLink>
         </nav>
 
         {/* Auth */}
@@ -56,10 +56,10 @@ export default function Header({ user, onLogout }) {
 
       {/* Mobile drawer */}
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-        <Link to="/" className="mobile-link" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link to="/dealers" className="mobile-link" onClick={() => setMenuOpen(false)}>Dealerships</Link>
-        <Link to="/about" className="mobile-link" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link to="/contact" className="mobile-link" onClick={() => setMenuOpen(false)}>Contact</Link>
+        <NavLink to="/" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>Home</NavLink>
+        <NavLink to="/dealers" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>Dealerships</NavLink>
+        <NavLink to="/about" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>About</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => `mobile-link ${isActive ? 'active' : ''}`} onClick={() => setMenuOpen(false)}>Contact</NavLink>
         {user ? (
           <button className="mobile-link btn-outline" onClick={handleLogout}>Logout ({user})</button>
         ) : (
