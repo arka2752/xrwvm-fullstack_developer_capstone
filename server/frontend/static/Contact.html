@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Best Cars Dealership</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+        .header { background: #1a1a2e; color: white; padding: 20px; text-align: center; }
+        nav { background: #16213e; padding: 10px 0; text-align: center; }
+        nav a { color: white; text-decoration: none; margin: 0 20px; font-size: 16px; }
+        nav a.active { color: #e94560; border-bottom: 2px solid #e94560; padding-bottom: 4px; }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        h1 { color: #e94560; }
+        .contact-grid { display: flex; gap: 40px; flex-wrap: wrap; }
+        .contact-info { flex: 1; min-width: 250px; }
+        .contact-info div { display: flex; align-items: flex-start; margin-bottom: 25px; gap: 15px; }
+        .contact-info img { width: 50px; height: 50px; border-radius: 50%; }
+        .contact-info h3 { margin: 0 0 5px; color: #1a1a2e; }
+        .contact-info p { margin: 0; color: #555; font-size: 14px; }
+        .contact-form { flex: 1; min-width: 250px; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 14px; box-sizing: border-box; }
+        .contact-form button { background: #e94560; color: white; border: none; padding: 12px 30px; border-radius: 5px; cursor: pointer; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>?? Best Cars Dealership</h1>
+        <p>Your trusted dealership reviews network across the US</p>
+    </div>
+    <nav>
+        <a href="/home">Home</a>
+        <a href="/dealers">Dealerships</a>
+        <a href="/about">About</a>
+        <a href="/contact" class="active">Contact Us</a>
+    </nav>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you. Reach out to us through any of the channels below.</p>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div>
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John Smith">
+                    <div>
+                        <h3>John Smith</h3>
+                        <p>CEO & Founder</p>
+                        <p>?? john.smith@bestcars.com</p>
+                        <p>?? +1 (312) 555-0101</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                    <div>
+                        <h3>Sarah Johnson</h3>
+                        <p>Lead Developer</p>
+                        <p>?? sarah.johnson@bestcars.com</p>
+                        <p>?? +1 (312) 555-0102</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://randomuser.me/api/portraits/men/55.jpg" alt="Support Team">
+                    <div>
+                        <h3>Michael Chen</h3>
+                        <p>Customer Support</p>
+                        <p>?? support@bestcars.com</p>
+                        <p>?? +1 (312) 555-0199</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 style="margin:0">?? Office Address</h3>
+                    <p>123 Auto Drive, Chicago, IL 60601<br>Mon-Fri: 9AM - 6PM CST</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Send us a message</h2>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Subject">
+                <textarea rows="5" placeholder="Your message..."></textarea>
+                <button>Send Message</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
