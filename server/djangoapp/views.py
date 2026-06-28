@@ -47,7 +47,7 @@ def login_user(request):
 @require_http_methods(["GET"])
 def logout_user(request):
     logout(request)
-    return JsonResponse({'status': 'Logged Out'})
+    return JsonResponse({'userName': ''})
 
 
 @csrf_exempt

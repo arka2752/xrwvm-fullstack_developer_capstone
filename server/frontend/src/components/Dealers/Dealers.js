@@ -104,9 +104,9 @@ export default function Dealers({ user }) {
                 <div className="dealer-card-header">
                   <span className="dealer-state-badge">{dealer.st}</span>
                 </div>
-                <h3 className="dealer-name">{dealer.full_name}</h3>
+                <h3 className="dealer-name">{dealer.full_name} (ID: {dealer.id})</h3>
                 <p className="dealer-city">📍 {dealer.city}, {dealer.state}</p>
-                <p className="dealer-address text-muted">{dealer.address}, {dealer.zip}</p>
+                <p className="dealer-address text-muted">{dealer.address} • ZIP: {dealer.zip}</p>
                 <Link to={`/dealer/${dealer.id}`} className="dealer-cta">View Reviews →</Link>
                 {user && (
                   <Link

@@ -66,37 +66,37 @@ export default function Register({ onLogin }) {
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="register-name-row">
               <div className="form-group">
-                <label className="form-label" htmlFor="reg-first">First Name</label>
-                <input id="reg-first" name="firstName" type="text" className="form-control" placeholder="John" value={form.firstName} onChange={handleChange} />
+                <label className="form-label" htmlFor="reg-first">First Name <span style={{ color: '#ef4444' }}>*</span></label>
+                <input id="reg-first" name="firstName" type="text" className="form-control" placeholder="First Name" value={form.firstName} onChange={handleChange} required />
               </div>
               <div className="form-group">
-                <label className="form-label" htmlFor="reg-last">Last Name</label>
-                <input id="reg-last" name="lastName" type="text" className="form-control" placeholder="Doe" value={form.lastName} onChange={handleChange} />
+                <label className="form-label" htmlFor="reg-last">Last Name <span style={{ color: '#ef4444' }}>*</span></label>
+                <input id="reg-last" name="lastName" type="text" className="form-control" placeholder="Last Name" value={form.lastName} onChange={handleChange} required />
               </div>
             </div>
 
             <div className="form-group">
-              <label className="form-label" htmlFor="reg-email">Email Address</label>
-              <input id="reg-email" name="email" type="email" className="form-control" placeholder="john@example.com" value={form.email} onChange={handleChange} />
+              <label className="form-label" htmlFor="reg-email">Email Address <span style={{ color: '#ef4444' }}>*</span></label>
+              <input id="reg-email" name="email" type="email" className="form-control" placeholder="Email" value={form.email} onChange={handleChange} required />
             </div>
 
             <div className="form-group">
               <label className="form-label" htmlFor="reg-username">Username <span style={{ color: '#ef4444' }}>*</span></label>
-              <input id="reg-username" name="userName" type="text" className="form-control" placeholder="Choose a unique username" value={form.userName} onChange={handleChange} required />
+              <input id="reg-username" name="userName" type="text" className="form-control" placeholder="Username" value={form.userName} onChange={handleChange} required />
             </div>
 
             <div className="form-group">
               <label className="form-label" htmlFor="reg-password">Password <span style={{ color: '#ef4444' }}>*</span></label>
-              <input id="reg-password" name="password" type="password" className="form-control" placeholder="At least 6 characters" value={form.password} onChange={handleChange} required />
+              <input id="reg-password" name="password" type="password" className="form-control" placeholder="Password" value={form.password} onChange={handleChange} required />
             </div>
 
             <div className="form-group">
               <label className="form-label" htmlFor="reg-confirm">Confirm Password <span style={{ color: '#ef4444' }}>*</span></label>
-              <input id="reg-confirm" name="confirmPassword" type="password" className="form-control" placeholder="Repeat your password" value={form.confirmPassword} onChange={handleChange} required />
+              <input id="reg-confirm" name="confirmPassword" type="password" className="form-control" placeholder="Confirm Password" value={form.confirmPassword} onChange={handleChange} required />
             </div>
 
             <button id="register-submit" type="submit" className="btn-primary auth-submit" disabled={loading}>
-              {loading ? 'Creating account…' : 'Create Account →'}
+              {loading ? 'Creating account…' : 'Register'}
             </button>
           </form>
 

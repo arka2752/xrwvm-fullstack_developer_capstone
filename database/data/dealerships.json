@@ -13,5 +13,6 @@
   { "id": 12, "city": "Seattle",       "state": "Washington",  "st": "WA", "address": "400 Broad St",           "zip": "98109", "lat": 47.6205, "long": -122.3493,"short_name": "Best Cars Seattle",     "full_name": "Best Cars Dealership Seattle" },
   { "id": 13, "city": "Denver",        "state": "Colorado",    "st": "CO", "address": "1600 Glenarm Pl",        "zip": "80202", "lat": 39.7474, "long": -104.9982,"short_name": "Best Cars Denver",      "full_name": "Best Cars Dealership Denver" },
   { "id": 14, "city": "Boston",        "state": "Massachusetts","st":"MA", "address": "1 City Hall Plaza",      "zip": "02201", "lat": 42.3601, "long": -71.0580, "short_name": "Best Cars Boston",      "full_name": "Best Cars Dealership Boston" },
-  { "id": 15, "city": "Nashville",     "state": "Tennessee",   "st": "TN", "address": "301 Broadway",           "zip": "37201", "lat": 36.1595, "long": -86.7816, "short_name": "Best Cars Nashville",   "full_name": "Best Cars Dealership Nashville" }
+  { "id": 15, "city": "Nashville",     "state": "Tennessee",   "st": "TN", "address": "301 Broadway",           "zip": "37201", "lat": 36.1595, "long": -86.7816, "short_name": "Best Cars Nashville",   "full_name": "Best Cars Dealership Nashville" },
+  { "id": 16, "city": "Topeka",        "state": "Kansas",      "st": "KS", "address": "123 Kansas Ave",          "zip": "66603", "lat": 39.0473, "long": -95.6752, "short_name": "Best Cars Topeka",      "full_name": "Best Cars Dealership Topeka" }
 ]
